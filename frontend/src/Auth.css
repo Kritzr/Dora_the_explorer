@@ -1,0 +1,272 @@
+/* Auth.css */
+:root {
+    --primary-color: #4361ee;
+    --primary-hover: #3a56d4;
+    --error-color: #e63946;
+    --success-color: #2a9d8f;
+    --border-color: #ddd;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --light-text: #6c757d;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fb;
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .auth-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+  
+  .form-wrapper {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  
+  .form-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .form-tab {
+    flex: 1;
+    padding: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    color: var(--light-text);
+  }
+  
+  .form-tab.active {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+  }
+  
+  .form-tab:hover {
+    background-color: var(--light-bg);
+  }
+  
+  .auth-form {
+    padding: 30px;
+  }
+  
+  .auth-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--text-color);
+    font-weight: 600;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .form-row {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+  
+  .form-field {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .form-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-color);
+  }
+  
+  .form-field input,
+  .form-field select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    transition: border 0.3s ease;
+  }
+  
+  .form-field input:focus,
+  .form-field select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
+  }
+  
+  .error-input {
+    border-color: var(--error-color) !important;
+  }
+  
+  .error {
+    color: var(--error-color);
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+  }
+  
+  .required {
+    color: var(--error-color);
+  }
+  
+  .checkbox-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .checkbox-field input {
+    width: auto;
+  }
+  
+  .checkbox-field label {
+    margin-bottom: 0;
+  }
+  
+  .radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .radio-option input {
+    width: auto;
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .submit-btn,
+  .reset-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .submit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    flex: 2;
+  }
+  
+  .submit-btn:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  .reset-btn {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    flex: 1;
+  }
+  
+  .reset-btn:hover {
+    background-color: #e9ecef;
+  }
+  
+  .forgot-password {
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  
+  .forgot-password a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .forgot-password a:hover {
+    text-decoration: underline;
+  }
+  
+  .form-footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  .form-footer .link {
+    color: var(--primary-color);
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .form-footer .link:hover {
+    text-decoration: underline;
+  }
+  
+  .success-message {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .success-message h2 {
+    color: var(--success-color);
+    margin-bottom: 15px;
+  }
+  
+  .success-message p {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  
+  .success-message .reset-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .success-message .reset-btn:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  /* Login form specific styles */
+  .login-form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
